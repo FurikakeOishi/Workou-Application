@@ -1,0 +1,25 @@
+.image-div{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    color: aliceblue;
+    background-color: #3e5bffcf;
+    
+}
+
+.add-workout{
+  width: 100%;
+    height: 250px;
+    text-align: center;
+    color: rgb(75, 79, 83);
+    background-color: #d7e658;
+}
+
+.example-card {
+    max-width: 500px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/images/image-placeholder.png');
+    background-size: cover;
+  }

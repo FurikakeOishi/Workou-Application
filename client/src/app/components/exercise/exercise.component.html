@@ -1,0 +1,20 @@
+<p>exercise works!</p>
+<div class="form-container mat-elevation-z5">
+    <h1>Create a new Exercise!</h1>
+    <form [formGroup]="addExerciseForm" (ngSubmit)="submit()">
+        <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name" />
+        </mat-form-field>
+        <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description" />
+        </mat-form-field>
+        <mat-form-field>
+        <input matInput placeholder="Muscle Group" formControlName="musclegroup" />
+        </mat-form-field>
+
+        <div class="center margin-top">
+        <button type="submit" mat-raised-button color="primary">Add</button>
+        </div>
+    </form>
+</div>
+  

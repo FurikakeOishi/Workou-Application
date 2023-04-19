@@ -1,0 +1,47 @@
+<div class="form-container mat-elevation-z5">
+  <h1>Create a new workout!</h1>
+  <form [formGroup]="addWorkoutForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Duration" formControlName="duration" />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="datetime-local"
+        placeholder="Time at completion"
+        formControlName="timeatcompletion"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Date"
+        formControlName="date"
+      />
+    </mat-form-field>
+    
+    <div formArrayName="exercises">
+      <ng-container >
+        <form [formGroup]="exerciseForm">
+        <mat-form-field  appearance="fill">
+          <mat-label>Exercises</mat-label>
+          <mat-select formControlName="exerciseName" multiple>
+            <!-- access exercise.id to get the id of the exercise and add it to the workout creation -->
+            <!-- this is my ADD button, relative to the video -->
+            
+                <mat-option *ngFor="let exercise of exerciseList" [value]="exercise.id" (click)="addExercise()">{{exercise.name}}</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+        </form>
+      </ng-container>
+    </div>
+
+    <div class="center margin-top">
+      <button type="submit" mat-raised-button color="primary">Add</button>
+    </div>
+  </form>
+</div>

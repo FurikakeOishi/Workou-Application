@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "workouts",
+    "prod": "brain-project-a5a36"
+  },
+  "targets": {
+    "workouts": {
+      "hosting": {
+        "workouts": [
+          "workouts"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
